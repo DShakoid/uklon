@@ -166,6 +166,15 @@ html, body {
     padding: 32px 16px;
     display: flex;
 }
+.menu-header3{
+   background-color: #242629;
+    border-radius: 8px;
+    justify-content: space-between;
+    FONT-VARIANT: JIS04;
+    margin-bottom: 8px;
+    padding: 32px 16px;
+    display: flex;
+}
 
 .user-profile {
   display: flex;
