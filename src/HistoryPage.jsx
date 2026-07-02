@@ -22,7 +22,7 @@ export default function HistoryPage() {
     color: "#BB271A"
   }
 ];
- 
+  
   const trips = [
     {
       id: 1,
