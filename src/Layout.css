@@ -1,7 +1,8 @@
 .layout-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;          /* Наследует высоту от #root */
+  position: relative;
 }
 
 .app-header {
@@ -167,7 +168,8 @@
 }
 
 .main-content {
-  flex: 1;
-  overflow-y: auto;
-  padding: 16px;
+  display: flex;         /* Включаем flex, чтобы дочерние элементы понимали высоту */
+  flex-direction: column;
+  overflow: hidden;      /* Убираем баг с растягиванием */
+  position: relative;
 }
