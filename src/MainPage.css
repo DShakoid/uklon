@@ -35,7 +35,9 @@
   align-items: center;
   justify-content: center;
 }
-
+.geo-location-btn svg{
+  padding:0px
+}
 .map-pin { position: absolute; transform: translate(-50%, -50%); }
 .pin-core {
   width: 14px;
