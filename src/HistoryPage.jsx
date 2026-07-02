@@ -103,10 +103,16 @@ export default function HistoryPage() {
       <div className="stats-grid">
         {stats.map((item, i) => (
           <div key={i} className="stat-card">
+
+            
             <div className="stat-header">
-              <span>{item.label}</span>
-              <span>{item.icon}</span>
-            </div>
+  <span>{item.label}</span>
+  <span
+    dangerouslySetInnerHTML={{ __html: item.icon }}
+  />
+</div>
+
+            
             <h2>{item.value}</h2>
           </div>
         ))}
