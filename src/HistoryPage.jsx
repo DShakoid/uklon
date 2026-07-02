@@ -106,7 +106,7 @@ export default function HistoryPage() {
     experience: 'Більше 1 року',
     tripsCount: 921,
     rating: '4.96',
-    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80'
+    avatar: 'src/img/tolyan.png'
   };
 
   const templateCar = {
