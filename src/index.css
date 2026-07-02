@@ -1,50 +1,30 @@
-:root {
-  --bg-main: #121314;       /* Глубокий черный фон приложения */
-  --bg-card: #1e2022;       /* Графитовый фон карточек и меню */
-  --text-main: #ffffff;     /* Белый текст */
-  --text-muted: #8a8d90;    /* Серый вспомогательный текст */
-  --accent-green: #00ca80;  /* Неоново-зеленый */
-  --accent-yellow: #fbc02d; /* Желтый */
-  --border-color: #2a2c2f;  /* Разделители */
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  -webkit-tap-highlight-color: transparent; /* Убирает синюю рамку при клике на iOS */
-}
-
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #000; /* Внешний фон вокруг телефона на ПК */
-  overflow: hidden;       /* Запрещаем скролл самого окна браузера */
+  background-color: #000;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ГЛАВНЫЙ КОНТЕЙНЕР ПРИЛОЖЕНИЯ REACT */
 #root {
   width: 100%;
-  max-width: 430px;         /* Ограничение ширины под размер смартфона для ПК */
+  max-width: 430px;         /* Для красивого отображения на ПК по центру */
   height: 100vh;
-  height: 100dvh;           /* Идеальная динамическая высота на iOS */
+  height: 100dvh;           /* Динамическая высота для Safari */
   background-color: var(--bg-main);
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;         /* Запрещаем всему приложению скроллиться «колбасой» */
+  overflow: hidden;
 }
 
-/* Если открыли на реальном телефоне — убираем ограничения ПК и растягиваем честно */
 @media (max-width: 480px) {
   #root {
-    max-width: 100%;
+    max-width: 100%;        /* На телефоне раскрываемся во всю шину */
     height: 100vh;
     height: 100dvh;
   }
