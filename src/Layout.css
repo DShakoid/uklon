@@ -1,7 +1,7 @@
 .layout-container {
   display: flex;
   flex-direction: column;
-  height: 100%;          /* Наследует высоту от #root */
+  height: 100vh;          /* Наследует высоту от #root */
   position: relative;
   width:100vw;
 }
