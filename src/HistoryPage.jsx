@@ -102,9 +102,9 @@ export default function HistoryPage() {
 
   // Данные шаблона Uklon для детального экрана
   const templateDriver = {
-    name: 'Віктор',
-    experience: 'Більше 3 років',
-    tripsCount: 21959,
+    name: 'Анатолій',
+    experience: 'Більше 1 року',
+    tripsCount: 921,
     rating: '4.96',
     avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80'
   };
@@ -112,7 +112,7 @@ export default function HistoryPage() {
   const templateCar = {
     model: 'Чорний Toyota Prius',
     category: 'Стандарт',
-    number: 'KA4***P*'
+    number: 'СA2***Н*'
   };
 
   return (
@@ -210,7 +210,7 @@ export default function HistoryPage() {
             <div className="payment-title">Спосіб оплати</div>
             <div className="payment-value">
               <span className="apple-pay-icon">📱</span>
-              <span>Apple Pay</span>
+              <span>Готівка</span>
             </div>
             <div className="total-price">{selectedTrip.price}</div>
           </div>
