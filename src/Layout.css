@@ -9,19 +9,39 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  background-color: var(--bg-main);
-  position: sticky;
+  background: transparent; /* Убираем плотный фон */
+  position: absolute;     /* Накладываем поверх карты */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
 }
 
+/* Круглая подложка под бургер, если нужно сделать как на скрине */
 .menu-burger {
-  background: none;
+  background: #1a1c1e;
   border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* Желтая кнопка баланса вместо иконки архива */
+.archive-btn {
+  background: #fbc02d; /* Фирменный золотой цвет */
+  border: none;
+  color: #000;         /* Черный текст бонусов */
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .burger-line {
@@ -34,16 +54,6 @@
 .page-title {
   font-size: 20px;
   font-weight: 600;
-}
-
-.archive-btn {
-  background: var(--bg-card);
-  border: none;
-  color: var(--text-main);
-  padding: 8px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
 }
 
 /* СТИЛИ МЕНЮ */
