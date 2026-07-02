@@ -2,8 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 80px;
   padding: 8px;
+  padding-top: 80px;  /* Перенесли отступ внутрь, чтобы не ломать высоту */
+  
+  height: 100vh;      /* Строго ограничиваем высоту одним экраном */
+  overflow: hidden;   /* Запрещаем скролл всей страницы */
+  box-sizing: border-box; /* Чтобы паддинги не раздували страницу */
 }
 
 /* СТАТИСТИКА */
@@ -33,6 +37,11 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  
+  overflow-y: auto;   /* Включаем внутренний скролл для поездок */
+  flex: 1;            /* Заставляем список занять всё свободное место снизу */
+  padding-bottom: 30px; /* Чтобы последняя поездка не прилипала к нижнему краю */
+  -webkit-overflow-scrolling: touch; /* Плавный скролл для iOS */
 }
 
 .trip-card {
