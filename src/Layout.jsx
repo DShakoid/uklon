@@ -23,7 +23,7 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
       <div className={`side-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="menu-overlay" onClick={() => setIsMenuOpen(false)}></div>
         <div className="menu-content">
-          <div className="menu-header">
+          <div className="menu-header" style="margin-bottom:0px;>
             <div className="user-profile">
               <div className="avatar">МК</div>
               <div className="user-info">
