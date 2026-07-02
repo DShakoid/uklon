@@ -1,5 +1,6 @@
 import React from 'react';
 import './HistoryPage.css';
+import cashIcon from '.src/img/baxy.svg'; // Или путь к файлу
 
 export default function HistoryPage() {
   const stats = [
@@ -137,7 +138,7 @@ export default function HistoryPage() {
             <div className="trip-footer">
               <div className="price-box">
                 <span className="price">{trip.price}</span>
-                <span className="pay-method">💵</span>
+                <CashIcon className="cash-icon" /> {/* Вместо 💵 */}
               </div>
               <span className="status-badge">{trip.status}</span>
             </div>
