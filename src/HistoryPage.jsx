@@ -128,8 +128,8 @@ export default function HistoryPage() {
             </div>
 
             <div className="trip-actions">
-              <button className="action-btn">Обратно</button>
-              <button className="action-btn">Повторить</button>
+              <button className="action-btn">В зворотній бік</button>
+              <button className="action-btn">Повторити</button>
             </div>
           </div>
         ))}
