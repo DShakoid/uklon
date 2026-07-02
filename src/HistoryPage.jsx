@@ -1,26 +1,24 @@
 import React from 'react';
 import './HistoryPage.css';
-import cashIcon from './img/baxy.svg'; // Или путь к файлу
-import { ReactComponent as CashIcon } from './img/baxy.svg'; // Путь к твоему SVG
 
 export default function HistoryPage() {
   const stats = [
   {
     label: "Всього поїздок",
     value: 240,
-    icon: "directions_car",
+    icon: "🚗",
     color: "#2db7d2"
   },
   {
     label: "Завершених",
     value: 183,
-    icon: "check_circle",
+    icon: "✅",
     color: "#00ca80"
   },
   {
     label: "Скасовано",
     value: 57,
-    icon: "cancel",
+    icon: "❌",
     color: "#BB271A"
   }
 ];
@@ -136,10 +134,10 @@ export default function HistoryPage() {
               </div>
             </div>
 
-            <div className="trip-footer">
+             <div className="trip-footer">
               <div className="price-box">
                 <span className="price">{trip.price}</span>
-                <img src={cashIcon} alt="cash" className="cash-icon" />
+                <span className="pay-method">💵</span>
               </div>
               <span className="status-badge">{trip.status}</span>
             </div>
