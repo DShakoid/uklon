@@ -10,7 +10,7 @@ function App() {
     <Layout 
       // Если страница главная ('main'), передаем пустую строку, чтобы убрать текст. 
       // Если 'history' — выведется «Поездки».
-      pageTitle={activePage === 'main' ? '' : 'Поездки'} 
+      pageTitle={activePage === 'main' ? '' : ''} 
       activePage={activePage} 
       setActivePage={setActivePage}
     >
