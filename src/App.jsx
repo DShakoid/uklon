@@ -4,7 +4,7 @@ import HistoryPage from './HistoryPage';
 import MainPage from './MainPage';
 
 function App() {
-  const [activePage, setActivePage] = useState('history'); // По умолчанию открываем историю
+  const [activePage, setActivePage] = useState('main'); // По умолчанию открываем историю
 
   const getPageTitle = () => {
     if (activePage === 'history') return 'Поездки';
