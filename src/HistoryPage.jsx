@@ -156,7 +156,8 @@ export default function HistoryPage() {
                 <div className="trip-footer">
                   <div className="price-box">
                     <span className="price">{trip.price}</span>
-                    <img src="/baxy.png" alt="Cash" style={{ width: '24px', height: '16px', objectFit: 'contain' }} />
+                    <img src="/baxy.png" alt="Cash" style={{ width: '24px', height: '16px', objectFit: 'contain', verticalAlign: 'middle' }} />
+                  </div> {/* ТУТ БЫЛ ЗАКРЫТ PRICE-BOX */}
                   <span className="status-badge">{trip.status}</span>
                 </div>
 
