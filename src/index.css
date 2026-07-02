@@ -6,7 +6,7 @@
   --accent-green: #00ca80;  /* Неоново-зеленый (кнопки, Выполнен) */
   --accent-yellow: #fbc02d; /* Желтый (точка А) */
   --border-color: #2a2c2f;  /* Разделители */
-  width: 100%;
+  width: 100vw;
   max-width: 100vw;
   height: 100vh;          /* Строго фиксируем высоту по экрану */
   height: 100dvh;         /* Для идеального отображения в Safari на iOS */
