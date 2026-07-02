@@ -50,7 +50,7 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
 </div>
               <div className="user-info user-info2">
                 <h3>Рейтинг</h3>
-                <p>5</p>
+                <p>4.63</p>
               </div>
             </div>
           </div>
