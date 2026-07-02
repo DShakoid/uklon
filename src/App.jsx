@@ -4,17 +4,13 @@ import HistoryPage from './HistoryPage';
 import MainPage from './MainPage';
 
 function App() {
-  const [activePage, setActivePage] = useState('main'); // По умолчанию открываем историю
-
-  const getPageTitle = () => {
-    if (activePage === 'history') return 'Поездки';
-    if (activePage === 'main') return 'Заказ такси';
-    return 'Uklon';
-  };
+  const [activePage, setActivePage] = useState('main'); // По умолчанию открываем главную
 
   return (
     <Layout 
-      pageTitle={getPageTitle()} 
+      // Если страница главная ('main'), передаем пустую строку, чтобы убрать текст. 
+      // Если 'history' — выведется «Поездки».
+      pageTitle={activePage === 'main' ? '' : 'Поездки'} 
       activePage={activePage} 
       setActivePage={setActivePage}
     >
