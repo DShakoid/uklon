@@ -25,25 +25,27 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
         <div className="menu-content">
           <div className="menu-header">
             <div className="user-profile">
-              <div className="avatar">МКуу</div>
+              <div className="avatar">МК</div>
               <div className="user-info">
                 <h3>Марта</h3>
                 <p>Мій профіль</p>
               </div>
             </div>
             
-            <div className="user-profile2">
-              <div className="avatar2">МК</div>
-              <div className="user-info2">
+            <div className="user-profile user-profile2">
+              <div className="avatar avatar2">МК</div>
+              <div className="user-info user-info2">
                 <h3>Рейтинг</h3>
-                <p>Мій профіль</p>
+                <p>5</p>
               </div>
             </div>
             <button className="close-menu" onClick={() => setIsMenuOpen(false)}>×</button>
           </div>
 
           <nav className="menu-nav">
-            <button className="menu-item">⚙️ Київ</button>
+            <button className="menu-item">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M80-120v-720h400v160h400v560H80Zm80-80h240v-80H160v80Zm0-160h240v-80H160v80Zm0-160h240v-80H160v80Zm0-160h240v-80H160v80Zm320 480h320v-400H480v400Zm80-240v-80h160v80H560Zm0 160v-80h160v80H560Z"/></svg>
+              Київ</button>
             
             {/* Кнопка Поездки с чистым встроенным SVG */}
             <button 
