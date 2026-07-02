@@ -31,9 +31,10 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
                 <p>Мій профіль</p>
               </div>
             </div>
-            
+             </div>
+             <div className="menu-header">
             <div className="user-profile user-profile2">
-              <div className="avatar avatar2">
+              <div className="avatar2">
 <svg 
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 24 24" 
