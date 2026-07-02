@@ -47,7 +47,7 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
               className={`menu-item ${activePage === 'history' ? 'active' : ''}`}
               onClick={() => { setActivePage('history'); setIsMenuOpen(false); }}
             >
-					  <HistoryIcon size={20} className="clock-icon" /> Поїздки
+			 Поїздки
             </button>
             <button className="menu-item">💳 Знижки на поїздки</button>
             <button className="menu-item">🎁 Доставка Extra</button>
