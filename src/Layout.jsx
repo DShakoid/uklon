@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Layout.css';
-import '.src/icons/HistoryIcon.jsx';
 
 export default function Layout({ children, pageTitle, activePage, setActivePage }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
