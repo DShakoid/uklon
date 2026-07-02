@@ -1,8 +1,8 @@
 .layout-container {
   display: flex;
   flex-direction: column;
-  height: 100%;          /* Наследуем высоту строго от #root */
-  width: 100%;           /* Никаких 100vw, только 100% от родительской ширины */
+  height: 100%;          
+  width: 100%;           
   position: relative;
 }
 
@@ -12,7 +12,7 @@
   justify-content: space-between;
   padding: 16px;
   background: transparent;
-  position: absolute;     /* Красиво парит над картой */
+  position: absolute;     
   top: 0;
   left: 0;
   right: 0;
@@ -34,7 +34,7 @@
 }
 
 .archive-btn {
-  background: #fbc02d;   /* Золотой баланс бонусов */
+  background: #fbc02d;   
   border: none;
   color: #000;
   font-weight: bold;
@@ -45,7 +45,7 @@
 }
 
 .burger-line {
-  width: 20px;           /* Чуть аккуратнее */
+  width: 20px;           
   height: 2px;
   background-color: var(--text-main);
   border-radius: 2px;
@@ -56,13 +56,13 @@
   font-weight: 600;
 }
 
-/* СТИЛИ БОКОВОГО МЕНЮ (Привязываем к размерам #root) */
+/* СТИЛИ БОКОВОГО МЕНЮ */
 .side-menu {
-  position: absolute;    /* Меняем fixed на absolute, чтобы меню не вываливалось за рамки экрана */
+  position: absolute;    
   top: 0;
   left: 0;
-  width: 100%;           /* Строго в рамках ширины приложения */
-  height: 100%;          /* Строго на высоту приложения */
+  width: 100%;           
+  height: 100%;          
   z-index: 99;
   visibility: hidden;
   transition: visibility 0.3s;
@@ -166,9 +166,8 @@
   color: var(--accent-green);
 }
 
-/* ОСНОВНОЙ КОНТЕНТ */
 .main-content {
-  flex: 1;               /* Заставляет контент забирать всё доступное пространство */
+  flex: 1;               
   display: flex;
   flex-direction: column;
   overflow: hidden;
