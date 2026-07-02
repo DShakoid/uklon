@@ -31,6 +31,7 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
                 <p>Мій профіль</p>
               </div>
             </div>
+                <button className="close-menu" onClick={() => setIsMenuOpen(false)}>×</button>
              </div>
              <div className="menu-header">
             <div className="user-profile user-profile2">
@@ -67,7 +68,6 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
                 <p>5</p>
               </div>
             </div>
-            <button className="close-menu" onClick={() => setIsMenuOpen(false)}>×</button>
           </div>
 
           <nav className="menu-nav">
