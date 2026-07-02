@@ -60,6 +60,7 @@
 .route-container {
   display: flex;
   gap: 12px;
+  color:white;
 }
 
 .route-line {
