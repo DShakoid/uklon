@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './HistoryPage.css';
+import tolyanAvatar from './img/tolyan.png'; // Проверь правильность пути относительно файла!
 
 export default function HistoryPage() {
   const [selectedTrip, setSelectedTrip] = useState(null);
@@ -106,7 +107,7 @@ export default function HistoryPage() {
     experience: 'Більше 1 року',
     tripsCount: 921,
     rating: '4.96',
-    avatar: 'src/img/tolyan.png'
+    avatar: tolyanAvatar
   };
 
   const templateCar = {
