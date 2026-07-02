@@ -149,8 +149,7 @@ html, body {
   padding: 24px 0px;
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
-  border-radius:
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5)
 }
 
 .side-menu.open .menu-content {
