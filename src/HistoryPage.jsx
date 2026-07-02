@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './HistoryPage.css';
-import tolyanAvatar from './img/tolyan.png'; // Проверь правильность пути относительно файла!
-import baxy from './img/baxy.png';
 
 export default function HistoryPage() {
   const [selectedTrip, setSelectedTrip] = useState(null);
@@ -158,8 +156,7 @@ export default function HistoryPage() {
                 <div className="trip-footer">
                   <div className="price-box">
                     <span className="price">{trip.price}</span>
-                    <img src={baxy} alt="Cash" className="apple-pay-icon" style={{ width: '20px', height: '20px', objectFit: 'contain' }} />
-                  </div>
+                    <img src="/baxy.png" alt="Cash" style={{ width: '24px', height: '16px', objectFit: 'contain' }} />
                   <span className="status-badge">{trip.status}</span>
                 </div>
 
@@ -211,7 +208,7 @@ export default function HistoryPage() {
           <div className="payment-section">
             <div className="payment-title">Спосіб оплати</div>
             <div className="payment-value">
-              <img src={baxy} alt="Cash" className="apple-pay-icon" style={{ width: '20px', height: '20px', objectFit: 'contain' }} />
+              <img src="/baxy.png" alt="Cash" style={{ width: '24px', height: '16px', objectFit: 'contain' }} />
               <span>Готівка</span>
             </div>
             <div className="total-price">{selectedTrip.price}</div>
