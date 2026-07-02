@@ -3,19 +3,19 @@ import './HistoryPage.css';
 
 export default function HistoryPage() {
   const stats = [
-    { label: 'Всего поездок', value: 414, icon: '🚙' },
-    { label: 'Выполненных', value: 393, icon: '✅' },
-    { label: 'Отменено', value: 21, icon: '❌' }
+    { label: 'Всього поїздок', value: 414, icon: '🚙' },
+    { label: 'Завершених', value: 393, icon: '✅' },
+    { label: 'Скасовано', value: 21, icon: '❌' }
   ];
 
   const trips = [
     {
       id: 1,
-      date: '25 мая 2026 г., 13:04',
+      date: '25 трав. 2026 г., 13:04',
       from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
       to: 'Місце посадки (Київ, Каховська вулиця, 62А)',
       price: '303 ₴',
-      status: 'ВЫПОЛНЕН'
+      status: 'ВИКОНАНО'
     },
     {
       id: 2,
