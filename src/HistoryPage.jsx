@@ -211,7 +211,7 @@ export default function HistoryPage() {
           <div className="payment-section">
             <div className="payment-title">Спосіб оплати</div>
             <div className="payment-value">
-              <span className="apple-pay-icon">baxy</span>
+              <img src={baxy} alt="Cash" className="apple-pay-icon" style={{ width: '20px', height: '20px', objectFit: 'contain' }} />
               <span>Готівка</span>
             </div>
             <div className="total-price">{selectedTrip.price}</div>
