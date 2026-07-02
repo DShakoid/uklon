@@ -1,8 +1,8 @@
 .main-page {
   display: flex;
   flex-direction: column;
-  height: 100vh;          /* Занимает ровно 100% от .main-content */
-  width: 100vw;
+  height: 100%;             /* Строго 100% от контейнера #root, никаких vh! */
+  width: 100%;              /* Строго 100% от контейнера #root, никаких vw! */
   position: relative;
   overflow: hidden;
 }
