@@ -59,7 +59,6 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
         width="0.3" 
         height="0.3"
       />
-    </svg>
 </svg>
 </div>
               <div className="user-info user-info2">
