@@ -1,86 +1,89 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MainPage.css';
 
 export default function MainPage() {
-  const [step, setStep] = useState(1); // 1: Выбор адреса, 2: Выбор тарифа
-  const [selectedTariff, setSelectedTariff] = useState('standard');
-
-  const tariffs = [
-    { id: 'standard', name: 'Стандарт', price: '120 ₴', time: '3 мин', icon: '🚗' },
-    { id: 'comfort', name: 'Комфорт', price: '165 ₴', time: '2 мин', icon: '📱' },
-    { id: 'business', name: 'Бизнес', price: '240 ₴', time: '5 min', icon: '💼' }
+  const services = [
+    { id: 'delivery', name: 'Доставка', icon: '📦', isBeta: false },
+    { id: 'travel', name: 'Путешествия', icon: '🚌', isBeta: true },
+    { id: 'flowers', name: 'Цветы', icon: '💐', isBeta: true },
+    { id: 'assist', name: 'Автоподмога', icon: '🛠️', isBeta: false },
+    { id: 'intercity', name: 'Межгород', icon: '🛣️', isBeta: false },
+    { id: 'donate', name: 'Донат', icon: '🛸', isBeta: false },
   ];
 
   return (
     <div className="main-page">
-      {/* КАРТА (Имитация ночной карты Уклона) */}
-      <div className="map-mock">
-        <div className="map-route-line"></div>
-        <div className="map-pin pin-a">А</div>
-        <div className="map-pin pin-b">Б</div>
-        <div className="map-car">🚕</div>
+      {/* КАРТА */}
+      <div className="map-container">
+        {/* Интерактивные точки на карте */}
+        <div className="map-pin yellow-glow" style={{ top: '45%', left: '50%' }}>
+          <div className="pin-core"></div>
+        </div>
+        <div className="map-pin double-ring" style={{ top: '50%', left: '48%' }}>🔄</div>
+        
+        {/* Кнопка Моя локация справа */}
+        <button className="geo-location-btn">🎯</button>
       </div>
 
-      {/* ИНТЕРФЕЙС ЗАКАЗА (Нижняя плашка) */}
-      <div className="order-sheet">
-        <div className="drag-handle"></div>
+      {/* НИЖНЯЯ ПАНЕЛЬ ЗАКАЗА */}
+      <div className="uklon-bottom-sheet">
+        <div className="sheet-handle"></div>
 
-        {step === 1 ? (
-          /* ШАГ 1: КУДА ЕДЕМ */
-          <div className="address-selection">
-            <h3 className="sheet-title">Куда едем?</h3>
-            <div className="input-block">
-              <div className="input-row">
-                <span className="dot yellow"></span>
-                <input type="text" placeholder="Откуда: Твой адрес..." defaultValue="Харківське шосе, 17А" />
+        {/* Блок Откуда */}
+        <div className="address-row pickup-point">
+          <span className="address-icon">📍</span>
+          <div className="address-text">
+            <span className="address-label">Місце посадки</span>
+            <span className="address-value">(Київ, Академіка Глушкова проспект)</span>
+          </div>
+        </div>
+
+        {/* Блок Куда едем */}
+        <div className="destination-bar">
+          <div className="search-input-wrapper">
+            <span className="arrow-icon">➔</span>
+            <input type="text" placeholder="Куда едем?" readOnly />
+          </div>
+          <div className="quick-shortcuts">
+            <button className="shortcut-btn">🏠⁺</button>
+            <button className="shortcut-btn">💼⁺</button>
+          </div>
+        </div>
+
+        {/* История / Последний адрес */}
+        <div className="recent-history-row">
+          <span className="clock-icon">🕒</span>
+          <div className="history-text">
+            <span className="history-title">Місце посадки</span>
+            <span className="history-value">(Київ, Каховська вулиця, 62А)</span>
+          </div>
+        </div>
+
+        {/* СЕТКА СЕРВИСОВ */}
+        <div className="services-grid">
+          {services.map((service) => (
+            <div key={service.id} className="service-card">
+              <div className="service-card-header">
+                <span className="service-name">{service.name}</span>
+                {service.isBeta && <span className="beta-badge">BETA</span>}
               </div>
-              <div className="input-divider"></div>
-              <div className="input-row">
-                <span className="dot white"></span>
-                <input type="text" placeholder="Куда: Пункт назначения" onClick={() => setStep(2)} />
-              </div>
+              <div className="service-icon">{service.icon}</div>
             </div>
-            
-            {/* Быстрые закладки (Любимые адреса) */}
-            <div className="favorite-addresses">
-              <div className="fav-item" onClick={() => setStep(2)}>🏠 <span>Дом</span></div>
-              <div className="fav-item" onClick={() => setStep(2)}>💼 <span>Работа</span></div>
+          ))}
+        </div>
+
+        {/* Блок "Может заинтересовать" */}
+        <div className="interest-section">
+          <h4>Может заинтересовать</h4>
+          <div className="promo-banner">
+            <div className="promo-badge">Реклама</div>
+            <div className="promo-content">
+              <h5>ПОСІПАКИ І МОНСТРИ</h5>
+              <p>Смотри в кинотеатрах Иллюминация!</p>
             </div>
           </div>
-        ) : (
-          /* ШАГ 2: ВЫБОР ТАРИФА И КНОПКА ЗАКАЗА */
-          <div className="tariff-selection">
-            <div className="back-to-addresses" onClick={() => setStep(1)}>← Изменить маршрут</div>
-            
-            <div className="tariffs-list">
-              {tariffs.map((t) => (
-                <div 
-                  key={t.id} 
-                  className={`tariff-card ${selectedTariff === t.id ? 'selected' : ''}`}
-                  onClick={() => setSelectedTariff(t.id)}
-                >
-                  <div className="tariff-icon">{t.icon}</div>
-                  <div className="tariff-info">
-                    <h4>{t.name}</h4>
-                    <p>{t.time}</p>
-                  </div>
-                  <div className="tariff-price">{t.price}</div>
-                </div>
-              ))}
-            </div>
+        </div>
 
-            {/* Детали оплаты */}
-            <div className="payment-bar">
-              <div className="pay-method">💵 Наличные</div>
-              <div className="promo-btn">🎁 Промокод</div>
-            </div>
-
-            {/* Главная кнопка */}
-            <button className="order-submit-btn">
-              Заказать {tariffs.find(t => t.id === selectedTariff).name}
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );
