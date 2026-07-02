@@ -153,6 +153,6 @@
   padding: 8px;
   cursor: pointer;
 }
-.action-btn:first-child, .action-btn:first-child::-webkit-scrollbar {
-  border-right: 1px solid var(--border-color);
+.action-btn:first-of-type {
+    border-right: 1px solid var(--border-color);
 }
