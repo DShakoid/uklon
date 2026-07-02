@@ -1,0 +1,163 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: var(--bg-main);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger-line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.archive-btn {
+  background: var(--bg-card);
+  border: none;
+  color: var(--text-main);
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* СТИЛИ МЕНЮ */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+
+.side-menu.open {
+  visibility: visible;
+}
+
+.menu-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.side-menu.open .menu-overlay {
+  opacity: 1;
+}
+
+.menu-content {
+  position: absolute;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background: var(--bg-card);
+  transition: left 0.3s ease;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open .menu-content {
+  left: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #000;
+}
+
+.user-info h3 {
+  font-size: 16px;
+}
+.user-info p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  text-align: left;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.menu-item.active, .menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-green);
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
