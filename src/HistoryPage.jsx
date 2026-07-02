@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './HistoryPage.css';
 import baxyImage from '/src/baxy.png';
+import tolyan from '/src/tolyan.png';
 
 export default function HistoryPage() {
   const [selectedTrip, setSelectedTrip] = useState(null);
