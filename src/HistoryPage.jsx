@@ -5,7 +5,7 @@ export default function HistoryPage() {
   const stats = [
   {
     label: "Всього поїздок",
-    value: 240,
+    value: 245,
     icon: "directions_car",
     color: "#2db7d2"
   },
