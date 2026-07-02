@@ -10,17 +10,17 @@
 /* НИЖНЯЯ ПАНЕЛЬ ТЕПЕРЬ ФИКСИРУЕТСЯ СНИЗУ И ИМЕЕТ СВОЙ СКРОЛЛ ЕСЛИ НАДО */
 .uklon-bottom-sheet {
   background-color: #1a1c1e;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  padding: 12px 16px 24px 16px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 16px 16px 32px 16px; /* Чуть увеличим нижний отступ для рамок безграничных экранов iOS */
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   
-  /* Максимальная высота шторки, чтобы она не перекрывала весь экран */
-  max-height: 60%;       
-  overflow-y: auto;      /* Если контента внутри много (например, реклама), скроллиться будет только шторка */
-  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.5);
+  /* Шторка занимает столько, сколько нужно контенту, но не более 75% экрана */
+  max-height: 75vh;       
+  overflow-y: auto;       /* Если экран совсем маленький, внутри включится аккуратный скролл */
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6);
   z-index: 5;
 }
 
@@ -174,9 +174,15 @@
 }
 
 .service-name {
-  font-size: 12px;
+  font-size: 13px; /* Немного крупнее и читабельнее */
   font-weight: 500;
   color: #fff;
+  line-height: 1.2;
+}
+
+.service-icon {
+  align-self: flex-end;
+  font-size: 28px; /* Увеличили иконку, чтобы она гармонировала с резиновой карточкой */
 }
 
 .beta-badge {
@@ -186,11 +192,6 @@
   font-weight: bold;
   padding: 1px 4px;
   border-radius: 4px;
-}
-
-.service-icon {
-  align-self: flex-end;
-  font-size: 24px;
 }
 
 /* БЛОК РЕКЛАМЫ */
