@@ -1,9 +1,9 @@
 .layout-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;          /* Наследует высоту от #root */
+  height: 100%;          /* Наследуем высоту строго от #root */
+  width: 100%;           /* Никаких 100vw, только 100% от родительской ширины */
   position: relative;
-  width:100vw;
 }
 
 .app-header {
@@ -11,15 +11,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  background: transparent; /* Убираем плотный фон */
-  position: absolute;     /* Накладываем поверх карты */
+  background: transparent;
+  position: absolute;     /* Красиво парит над картой */
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
 }
 
-/* Круглая подложка под бургер, если нужно сделать как на скрине */
 .menu-burger {
   background: #1a1c1e;
   border: none;
@@ -34,11 +33,10 @@
   gap: 4px;
 }
 
-/* Желтая кнопка баланса вместо иконки архива */
 .archive-btn {
-  background: #fbc02d; /* Фирменный золотой цвет */
+  background: #fbc02d;   /* Золотой баланс, как на скрине */
   border: none;
-  color: #000;         /* Черный текст бонусов */
+  color: #000;
   font-weight: bold;
   padding: 8px 14px;
   border-radius: 12px;
@@ -47,7 +45,7 @@
 }
 
 .burger-line {
-  width: 24px;
+  width: 20px;           /* Сделаем чуть аккуратнее */
   height: 2px;
   background-color: var(--text-main);
   border-radius: 2px;
@@ -58,13 +56,13 @@
   font-weight: 600;
 }
 
-/* СТИЛИ МЕНЮ */
+/* СТИЛИ МЕНЮ (Привязываем к размерам #root) */
 .side-menu {
-  position: fixed;
+  position: absolute;    /* Меняем fixed на absolute, чтобы меню не вываливалось за рамки смартфона на ПК */
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;           /* Строго в рамках ширины приложения */
+  height: 100%;          /* Строго на высоту приложения */
   z-index: 99;
   visibility: hidden;
   transition: visibility 0.3s;
@@ -169,8 +167,10 @@
 }
 
 .main-content {
-  display: flex;         /* Включаем flex, чтобы дочерние элементы понимали высоту */
+  flex: 1;               /* Заставляет контент забирать всё доступное пространство */
+  display: flex;
   flex-direction: column;
-  overflow: hidden;      /* Убираем баг с растягиванием */
+  overflow: hidden;
   position: relative;
+  width: 100%;
 }
