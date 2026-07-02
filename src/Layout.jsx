@@ -42,12 +42,7 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
       width="24" 
       height="24"
     >
-     <g>
-	<polygon class="st0" points="13.5,10.5 12,7.1 10.5,10.5 6.9,10.8 9.7,13.3 8.8,16.8 12,14.9 15.2,16.8 14.3,13.3 17.1,10.8 	"/>
-	<path class="st0" d="M14.8,8.6L12,2L9.2,8.6L2,9.3L7.5,14l-1.6,7l6.2-3.7l6.2,3.7l-1.6-7L22,9.3L14.8,8.6z M15.2,16.8L12,14.9
-		l-3.2,1.9l0.8-3.6l-2.8-2.4l3.6-0.3L12,7.1l1.5,3.4l3.6,0.3l-2.8,2.4L15.2,16.8z"/>
-</g>
-<rect x="44.2" y="17.8" class="st1" width="0.3" height="0.3"/>
+<polygon class="st0" points="22,9.3 14.8,8.6 12,2 9.2,8.6 2,9.3 7.5,14 5.8,21 12,17.3 18.2,21 16.5,14 "/>
 </svg>
 </div>
               <div className="user-info user-info2">
