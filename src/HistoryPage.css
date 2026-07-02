@@ -99,8 +99,12 @@ header.app-header {
   height: 8px;
   border-radius: 50%;
 }
-.dot.yellow { background-color: var(--accent-yellow);width: 12px;height: 12px; }
+.dot.yellow { background-color: var(--accent-yellow);}
 .dot.white { background-color: #fff; }
+.yellow{
+  width: 12px;
+  height: 12px; 
+}
 
 .line {
   width: 2px;
