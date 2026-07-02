@@ -30,10 +30,10 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
                 <h3>Марта</h3>
                 <p>Мій профіль</p>
               </div>
-              <div className="user-profile">
+              <div className="user-profile2">
               <div className="avatar2">МК</div>
-              <div className="user-info">
-                <h3>Марта</h3>
+              <div className="user-info2">
+                <h3>Рейтинг</h3>
                 <p>Мій профіль</p>
               </div>
             </div>
