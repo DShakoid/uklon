@@ -31,54 +31,53 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
                 <p>Мій профіль</p>
               </div>
             </div>
-            
+                <button className="close-menu" onClick={() => setIsMenuOpen(false)}>×</button>
+             </div>
+             <div className="menu-header">
             <div className="user-profile user-profile2">
-              <div className="avatar avatar2">
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  viewBox="0 0 24 24" 
-                  width="24" 
-                  height="24"
-                >
-                  <g>
-                    <polygon 
-                      fill="#FFFF55" 
-                      points="13.5,10.5 12,7.1 10.5,10.5 6.9,10.8 9.7,13.3 8.8,16.8 12,14.9 15.2,16.8 14.3,13.3 17.1,10.8"
-                    />
-                    <path 
-                      fill="#FFFF55" 
-                      d="M14.8,8.6L12,2L9.2,8.6L2,9.3L7.5,14l-1.6,7l6.2-3.7l6.2,3.7l-1.6-7L22,9.3L14.8,8.6z M15.2,16.8L12,14.9 l-3.2,1.9l0.8-3.6l-2.8-2.4l3.6-0.3L12,7.1l1.5,3.4l3.6,0.3l-2.8,2.4L15.2,16.8z"
-                    />
-                  </g>
-                  <rect 
-                    x="44.2" 
-                    y="17.8" 
-                    fill="#1ED17B" 
-                    stroke="#000000" 
-                    strokeMiterlimit="10" 
-                    width="0.3" 
-                    height="0.3"
-                  />
-                </svg>
-              </div>
+              <div className="avatar2">
+<svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 24 24" 
+      width="24" 
+      height="24"
+    >
+      <g>
+        <polygon 
+          fill="#FFFF55" 
+          points="13.5,10.5 12,7.1 10.5,10.5 6.9,10.8 9.7,13.3 8.8,16.8 12,14.9 15.2,16.8 14.3,13.3 17.1,10.8"
+        />
+        <path 
+          fill="#FFFF55" 
+          d="M14.8,8.6L12,2L9.2,8.6L2,9.3L7.5,14l-1.6,7l6.2-3.7l6.2,3.7l-1.6-7L22,9.3L14.8,8.6z M15.2,16.8L12,14.9 l-3.2,1.9l0.8-3.6l-2.8-2.4l3.6-0.3L12,7.1l1.5,3.4l3.6,0.3l-2.8,2.4L15.2,16.8z"
+        />
+      </g>
+      <rect 
+        x="44.2" 
+        y="17.8" 
+        fill="#1ED17B" 
+        stroke="#000000" 
+        strokeMiterlimit="10" 
+        width="0.3" 
+        height="0.3"
+      />
+</svg>
+</div>
               <div className="user-info user-info2">
                 <h3>Рейтинг</h3>
                 <p>5</p>
               </div>
             </div>
-            <button className="close-menu" onClick={() => setIsMenuOpen(false)}>×</button>
           </div>
 
-          {/* ВСЕ КНОПКИ В ОДНОМ НАВИГАЦИОННОМ МЕНЮ */}
           <nav className="menu-nav">
             <button className="menu-item">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-                <path d="M80-120v-720h400v160h400v560H80Zm80-80h240v-80H160v80Zm0-160h240v-80H160v80Zm0-160h240v-80H160v80Zm0-160h240v-80H160v80Zm320 480h320v-400H480v400Zm80-240v-80h160v80H560Zm0 160v-80h160v80H560Z"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M80-120v-720h400v160h400v560H80Zm80-80h240v-80H160v80Zm0-160h240v-80H160v80Zm0-160h240v-80H160v80Zm0-160h240v-80H160v80Zm320 480h320v-400H480v400Zm80-240v-80h160v80H560Zm0 160v-80h160v80H560Z"/></svg>
               Київ
             </button>
-            
-            {/* Кнопка Поездки */}
+            </nav>
+         <nav className="menu-nav">    
+            {/* Кнопка Поездки с чистым встроенным SVG */}
             <button 
               className={`menu-item ${activePage === 'history' ? 'active' : ''}`}
               onClick={() => { setActivePage('history'); setIsMenuOpen(false); }}
