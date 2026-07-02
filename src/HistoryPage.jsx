@@ -21,22 +21,7 @@ export default function HistoryPage() {
     }
   ];
 
-  return (
-    <div className="stats-container">
-      {stats.map((stat, index) => (
-        <div key={index} className="stat-card">
-          {/* Рендерим иконку как обычный компонент/тег */}
-          <div className="stat-icon">{stat.icon}</div>
-          <div className="stat-info">
-            <span className="stat-value">{stat.value}</span>
-            <span className="stat-label">{stat.label}</span>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
+ 
   const trips = [
     {
       id: 1,
