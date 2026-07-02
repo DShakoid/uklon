@@ -146,10 +146,11 @@ html, body {
   height: 100%;
   background: var(--bg-card);
   transition: left 0.3s ease;
-  padding: 24px 16px;
+  padding: 24px 0px;
   display: flex;
   flex-direction: column;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+  border-radius:
 }
 
 .side-menu.open .menu-content {
@@ -161,6 +162,9 @@ html, body {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 32px;
+      padding: 32px 16px;
+  border-radius: 8px;
+background-color: #242629;
 }
 
 .user-profile {
@@ -202,9 +206,12 @@ html, body {
 
 /* НАВИГАЦИЯ ВНУТРИ МЕНЮ */
 .menu-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+flex-direction: column;
+    gap: 8px;
+    display: flex;
+    margin-bottom: 9px;
+    background-color: #242629;
+  border-radius: 8px;
 }
 
 .menu-item {
@@ -223,7 +230,6 @@ html, body {
 .menu-item.active, 
 .menu-item:hover {
   background: rgba(255, 255, 255, 0.05);
-  color: var(--accent-green);
 }
 
 /* ========================================== */
