@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './HistoryPage.css';
+import baxyImage from '/src/baxy.png';
 
 export default function HistoryPage() {
   const [selectedTrip, setSelectedTrip] = useState(null);
@@ -156,8 +157,7 @@ export default function HistoryPage() {
                 <div className="trip-footer">
                   <div className="price-box">
                     <span className="price">{trip.price}</span>
-                    <img src="./baxy.png" alt="Cash" style={{ width: '24px', height: '16px', objectFit: 'contain', verticalAlign: 'middle' }} />
-                  </div> {/* ТУТ БЫЛ ЗАКРЫТ PRICE-BOX */}
+                    <img alt="Cash" src={baxyImage} style={{ width: 24, height: 16, objectFit: 'contain' }} />
                   <span className="status-badge">{trip.status}</span>
                 </div>
 
