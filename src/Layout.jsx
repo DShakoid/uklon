@@ -37,12 +37,15 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
             <div className="user-profile user-profile2">
               <div className="avatar2">
 <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 24 24" 
-      width="24" 
-      height="24"
-    >
-<polygon class="st0" points="22,9.3 14.8,8.6 12,2 9.2,8.6 2,9.3 7.5,14 5.8,21 12,17.3 18.2,21 16.5,14 "/>
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 24 24" 
+  width="24" 
+  height="24"
+>
+  <polygon 
+    fill="#FFFF55" 
+    points="22,9.3 14.8,8.6 12,2 9.2,8.6 2,9.3 7.5,14 5.8,21 12,17.3 18.2,21 16.5,14" 
+  />
 </svg>
 </div>
               <div className="user-info user-info2">
