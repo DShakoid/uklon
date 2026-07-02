@@ -25,31 +25,34 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
         <div className="menu-content">
           <div className="menu-header">
             <div className="user-profile">
-              <div className="avatar">ДШ</div>
+              <div className="avatar">МК</div>
               <div className="user-info">
-                <h3>Дмитро</h3>
-                <p>+380 (93) *** ** **</p>
+                <h3>Марта</h3>
+                <p>Мій профіль</p>
               </div>
             </div>
             <button className="close-menu" onClick={() => setIsMenuOpen(false)}>×</button>
           </div>
-          
+          <nav className="menu-nav">
+            <button className="menu-item">⚙️ Київ</button>
+          </nav>
           <nav className="menu-nav">
             <button 
               className={`menu-item ${activePage === 'main' ? 'active' : ''}`}
               onClick={() => { setActivePage('main'); setIsMenuOpen(false); }}
             >
-              🚗 Главная
+              🚗 Головна
             </button>
             <button 
               className={`menu-item ${activePage === 'history' ? 'active' : ''}`}
               onClick={() => { setActivePage('history'); setIsMenuOpen(false); }}
             >
-              📋 История поездок
+              📋 Поїздки
             </button>
-            <button className="menu-item">💳 Способы оплаты</button>
-            <button className="menu-item">🎁 Промокоды</button>
-            <button className="menu-item">⚙️ Настройки</button>
+            <button className="menu-item">💳 Знижки на поїздки</button>
+            <button className="menu-item">🎁 Доставка Extra</button>
+            <button className="menu-item">⚙️ Оплата</button>
+            <button className="menu-item">⚙️ Новини</button>
           </nav>
         </div>
       </div>
