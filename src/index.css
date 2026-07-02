@@ -31,13 +31,3 @@ body {
   justify-content: center;
 }
 
-/* Эмулируем экран смартфона для удобства работы над дизайном */
-#root {
-  width: 100%;
-  max-width: 430px;
-  min-height: 100vh;
-  background-color: var(--bg-main);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
