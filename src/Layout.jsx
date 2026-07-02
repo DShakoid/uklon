@@ -45,8 +45,10 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
           <nav className="menu-nav">
             <button className="menu-item">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M80-120v-720h400v160h400v560H80Zm80-80h240v-80H160v80Zm0-160h240v-80H160v80Zm0-160h240v-80H160v80Zm0-160h240v-80H160v80Zm320 480h320v-400H480v400Zm80-240v-80h160v80H560Zm0 160v-80h160v80H560Z"/></svg>
-              Київ</button>
-            
+              Київ
+            </button>
+            </nav>
+         <nav className="menu-nav">    
             {/* Кнопка Поездки с чистым встроенным SVG */}
             <button 
               className={`menu-item ${activePage === 'history' ? 'active' : ''}`}
