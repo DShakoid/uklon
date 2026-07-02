@@ -1,43 +1,218 @@
-/* Экран деталей поездки */
-.trip-details {
-  background-color: #f6f6f6;
-  min-height: 100vh;
+.history-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 8px;
+  padding-top: 80px;  /* Перенесли отступ внутрь, чтобы не ломать высоту */
+  
+  height: 100vh;      /* Строго ограничиваем высоту одним экраном */
+  overflow: auto;     /* Запрещаем скролл всей страницы */
+  box-sizing: border-box; /* Чтобы паддинги не раздували страницу */
+}
+
+.main-content {
+    overflow-y: scroll; /* Включаем прокрутку */
+    scrollbar-width: none; /* Firefox - убираем ползунок */
+    -ms-overflow-style: none; /* IE/Edge - убираем ползунок */
+}
+
+/* Chrome/Safari/Opera - убираем ползунок */
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* СТАТИСТИКА */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  color: white;
+}
+
+.stat-card {
+  background-color: var(--bg-card);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+/* КАРТОЧКА ПОЕЗДКИ */
+.trips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+  overflow-y: auto;   /* Включаем внутренний скролл для поездок */
+  flex: 1;            /* Заставляем список занять всё свободное место снизу */
+  padding-bottom: 30px; /* Чтобы последняя поездка не прилипала к нижнему краю */
+  -webkit-overflow-scrolling: touch; /* Плавный скролл для iOS */
+}
+
+.trip-card {
+  background-color: var(--bg-card);
+  border-radius: 16px;
   padding: 16px;
-  color: #1f2024;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: white;
+}
+
+.trip-card-header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.more-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* МАРШРУТ (Линия точек) */
+.route-container {
+  display: flex;
+  gap: 12px;
+  color: white;
+}
+
+.route-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.dot.yellow { background-color: var(--accent-yellow); }
+.dot.white { background-color: #fff; }
+.dot.grey { background-color: var(--text-muted); } /* Для экрана деталей */
+
+.line {
+  width: 2px;
+  flex: 1;
+  background-color: var(--border-color);
+  margin: 4px 0;
+}
+
+.route-addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+/* ФУТЕР КАРТОЧКИ */
+.trip-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.status-badge {
+  background-color: #00ca80;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* КНОПКИ ДЕЙСТВИЙ */
+.trip-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 14px;
+  padding: 8px;
+  cursor: pointer;
+}
+.action-btn:first-of-type {
+    border-right: 1px solid var(--border-color);
+}
+
+.page-title {
+  color: white;
+}
+
+/* ==========================================================================
+   НОВЫЕ СТИЛИ ДЛЯ ЭКРАНА ДЕТАЛЕЙ ПОЕЗДКИ (В ТВОЕМ ТЕМНОМ СТИЛЕ)
+   ========================================================================== */
+
+.trip-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: white;
   overflow-y: auto;
+  flex: 1;
+  padding-bottom: 40px;
 }
 
 .details-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .back-btn, .pdf-btn {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
-  color: #1f2024;
+  color: white;
+  padding: 4px;
 }
 
 .details-date {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin: 0 0 10px 0;
+  color: white;
 }
 
-/* Карточка водителя */
-.driver-section {
-  background: #ffffff;
-  border-radius: 12px;
+/* Общие блоки-карточки для экрана деталей */
+.driver-section, .car-section, .payment-section, .details-route, .help-menu-block {
+  background-color: var(--bg-card);
+  border-radius: 16px;
   padding: 16px;
+}
+
+/* Блок водителя */
+.driver-section {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 12px;
 }
 
 .driver-info {
@@ -45,10 +220,11 @@
 }
 
 .driver-avatar {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
+  background-color: #333;
 }
 
 .driver-rating-badge {
@@ -56,10 +232,10 @@
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffff;
-  border: 1px solid #e2e2e2;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
-  padding: 2px 6px;
+  padding: 1px 6px;
   font-size: 11px;
   font-weight: bold;
   white-space: nowrap;
@@ -67,41 +243,38 @@
 
 .driver-text h3 {
   margin: 0 0 4px 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .driver-text p {
   margin: 0;
-  font-size: 13px;
-  color: #727376;
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 /* Блок машины */
 .car-section {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
 }
 
 .car-text h4 {
   margin: 0;
   font-size: 15px;
+  font-weight: 500;
 }
 
 .car-text p {
   margin: 2px 0 0 0;
-  font-size: 13px;
-  color: #727376;
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 .car-number-plate {
-  background: #f1f1f1;
-  border: 1px solid #e2e2e2;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   padding: 6px 12px;
   font-weight: 700;
   font-size: 14px;
@@ -110,16 +283,12 @@
 
 /* Блок оплаты */
 .payment-section {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 12px;
   position: relative;
 }
 
-.payment-title {
-  font-size: 13px;
-  color: #727376;
+.payment-title, .route-title, .help-title {
+  font-size: 12px;
+  color: var(--text-muted);
   margin-bottom: 6px;
 }
 
@@ -128,7 +297,6 @@
   align-items: center;
   gap: 8px;
   font-size: 15px;
-  font-weight: 500;
 }
 
 .total-price {
@@ -136,90 +304,68 @@
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-/* Блок маршрута */
-.details-route {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-
-.route-title {
-  font-size: 13px;
-  color: #727376;
-  margin-bottom: 12px;
-}
-
-/* Кнопки действий */
+/* Кнопки действий на экране деталей */
 .details-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-bottom: 24px;
+  margin: 8px 0;
 }
 
 .btn-primary, .btn-secondary {
-  flex: 1;
   padding: 14px;
   border-radius: 12px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   border: none;
+  text-align: center;
 }
 
 .btn-primary {
-  background: #f1f1f1;
-  color: #1f2024;
+  background-color: var(--bg-card);
+  color: var(--text-main);
 }
 
 .btn-secondary {
-  background: #f1f1f1;
-  color: #1f2024;
+  background-color: var(--bg-card);
+  color: var(--text-main);
 }
 
-/* Меню помощи снизу */
-.help-menu {
-  margin-top: 12px;
+/* Блок меню помощи */
+.help-menu-block {
+  padding: 0;
+  overflow: hidden;
 }
 
 .help-title {
-  font-size: 13px;
-  color: #727376;
-  padding-left: 16px;
-  margin-bottom: 8px;
+  padding: 16px 16px 4px 16px;
+  margin: 0;
 }
 
 .help-item {
-  background: #ffffff;
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 15px;
-  border-bottom: 1px solid #f6f6f6;
+  border-bottom: 1px solid var(--border-color);
   cursor: pointer;
 }
 
-.help-item:first-of-type {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
 .help-item:last-of-type {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
   border-bottom: none;
 }
 
 .help-item span {
-  color: #b5b5b7;
-  font-size: 18px;
+  color: var(--text-muted);
+  font-size: 16px;
 }
 
 .error-text {
-  color: #ff3b30;
+  color: #ff453a;
 }
