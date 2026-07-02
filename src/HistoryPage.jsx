@@ -139,7 +139,7 @@ export default function HistoryPage() {
             <div className="trip-footer">
               <div className="price-box">
                 <span className="price">{trip.price}</span>
-                <CashIcon className="cash-icon" /> {/* Вместо 💵 */}
+                <img src={cashIcon} alt="cash" className="cash-icon" />
               </div>
               <span className="status-badge">{trip.status}</span>
             </div>
