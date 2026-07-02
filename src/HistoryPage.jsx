@@ -106,7 +106,7 @@ export default function HistoryPage() {
     experience: 'Більше 1 року',
     tripsCount: 921,
     rating: '4.96',
-    avatar: '/tolyan.png'
+    avatar: './tolyan.png'
   };
 
   const templateCar = {
@@ -156,7 +156,7 @@ export default function HistoryPage() {
                 <div className="trip-footer">
                   <div className="price-box">
                     <span className="price">{trip.price}</span>
-                    <img src="/baxy.png" alt="Cash" style={{ width: '24px', height: '16px', objectFit: 'contain', verticalAlign: 'middle' }} />
+                    <img src="./baxy.png" alt="Cash" style={{ width: '24px', height: '16px', objectFit: 'contain', verticalAlign: 'middle' }} />
                   </div> {/* ТУТ БЫЛ ЗАКРЫТ PRICE-BOX */}
                   <span className="status-badge">{trip.status}</span>
                 </div>
