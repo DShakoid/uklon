@@ -9,7 +9,16 @@
   overflow: auto;   /* Запрещаем скролл всей страницы */
   box-sizing: border-box; /* Чтобы паддинги не раздували страницу */
 }
+.main-content {
+    overflow-y: scroll; /* Включаем прокрутку */
+    scrollbar-width: none; /* Firefox - убираем ползунок */
+    -ms-overflow-style: none; /* IE/Edge - убираем ползунок */
+}
 
+/* Chrome/Safari/Opera - убираем ползунок */
+.main-content::-webkit-scrollbar {
+    display: none;
+}
 /* СТАТИСТИКА */
 .stats-grid {
   display: grid;
