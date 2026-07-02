@@ -96,7 +96,7 @@ export default function HistoryPage() {
       date: '4 черв. 2026 г., 22:19',
       from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
       to: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
-      price: '101010 ₴',
+      price: '1010 ₴',
       status: 'ВИКОНАНО'
     }
   ];
@@ -111,7 +111,7 @@ export default function HistoryPage() {
   };
 
   const templateCar = {
-    model: 'Чорний Toyota Prius',
+    model: 'HopHnü Mitsubishi Lancer',
     category: 'Стандарт',
     number: 'СA2***Н*'
   };
