@@ -1,6 +1,7 @@
 import React from 'react';
 import './HistoryPage.css';
 import cashIcon from '.src/img/baxy.svg'; // Или путь к файлу
+import { ReactComponent as CashIcon } from '.src/img/baxy.svg'; // Путь к твоему SVG
 
 export default function HistoryPage() {
   const stats = [
