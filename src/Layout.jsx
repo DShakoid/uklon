@@ -25,7 +25,7 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
         <div className="menu-content">
           <div className="menu-header">
             <div className="user-profile">
-              <div className="avatar">МК</div>
+              <div className="avatar">МКуу</div>
               <div className="user-info">
                 <h3>Марта</h3>
                 <p>Мій профіль</p>
