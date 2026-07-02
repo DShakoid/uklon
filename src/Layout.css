@@ -158,13 +158,13 @@ html, body {
 }
 
 .menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 32px;
-      padding: 32px 16px;
-  border-radius: 8px;
-background-color: #242629;
+    background-color: #242629;
+    border-radius: 8px;
+    justify-content: space-between;
+    FONT-VARIANT: JIS04;
+    margin-bottom: 8px;
+    padding: 32px 16px;
+    display: flex;
 }
 
 .user-profile {
