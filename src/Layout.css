@@ -34,7 +34,7 @@
 }
 
 .archive-btn {
-  background: #fbc02d;   /* Золотой баланс, как на скрине */
+  background: #fbc02d;   /* Золотой баланс бонусов */
   border: none;
   color: #000;
   font-weight: bold;
@@ -45,7 +45,7 @@
 }
 
 .burger-line {
-  width: 20px;           /* Сделаем чуть аккуратнее */
+  width: 20px;           /* Чуть аккуратнее */
   height: 2px;
   background-color: var(--text-main);
   border-radius: 2px;
@@ -56,9 +56,9 @@
   font-weight: 600;
 }
 
-/* СТИЛИ МЕНЮ (Привязываем к размерам #root) */
+/* СТИЛИ БОКОВОГО МЕНЮ (Привязываем к размерам #root) */
 .side-menu {
-  position: absolute;    /* Меняем fixed на absolute, чтобы меню не вываливалось за рамки смартфона на ПК */
+  position: absolute;    /* Меняем fixed на absolute, чтобы меню не вываливалось за рамки экрана */
   top: 0;
   left: 0;
   width: 100%;           /* Строго в рамках ширины приложения */
@@ -166,6 +166,7 @@
   color: var(--accent-green);
 }
 
+/* ОСНОВНОЙ КОНТЕНТ */
 .main-content {
   flex: 1;               /* Заставляет контент забирать всё доступное пространство */
   display: flex;
