@@ -31,7 +31,7 @@ export default function HistoryPage() {
       to: 'Київ, Каховська вулиця, 62А',
       price: '890 ₴',
       status: 'ВИКОНАНО'
-    },
+    }, 
     {
       id: 2,
       date: '26 черв. 2026 г., 22:46',
