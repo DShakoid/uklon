@@ -30,6 +30,12 @@ export default function Layout({ children, pageTitle, activePage, setActivePage 
                 <h3>Марта</h3>
                 <p>Мій профіль</p>
               </div>
+              <div className="user-profile">
+              <div className="avatar2">МК</div>
+              <div className="user-info">
+                <h3>Марта</h3>
+                <p>Мій профіль</p>
+              </div>
             </div>
             <button className="close-menu" onClick={() => setIsMenuOpen(false)}>×</button>
           </div>
