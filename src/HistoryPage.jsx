@@ -5,55 +5,115 @@ export default function HistoryPage() {
   const [selectedTrip, setSelectedTrip] = useState(null);
 
   const stats = [
-    { label: 'Всього поїздок', value: 414, icon: <span style={{color: '#2db7d2'}}>🚗</span> },
-    { label: 'Завершених', value: 393, icon: <span style={{color: '#00ca80'}}>✅</span> },
-    { label: 'Скасовано', value: 21, icon: <span style={{color: '#BB271A'}}>❌</span> }
+    {
+      label: "Всього поїздок",
+      value: 240,
+      icon: "🚗",
+      color: "#2db7d2"
+    },
+    {
+      label: "Завершених",
+      value: 183,
+      icon: "✅",
+      color: "#00ca80"
+    },
+    {
+      label: "Скасовано",
+      value: 57,
+      icon: "❌",
+      color: "#BB271A"
+    }
   ];
-
+  
   const trips = [
     {
       id: 1,
-      date: '18 черв. 2026р., 09:23',
-      from: 'Місце посадки (Київ, Каховська вулиця, 62А)',
-      to: 'Харківське шосе, 56',
-      price: '354 ₴',
-      status: 'ВИКОНАНО',
-      driver: {
-        name: 'Віктор',
-        experience: 'Більше 3 років',
-        tripsCount: 21959,
-        rating: '4.96',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80' // Временная заглушка фото
-      },
-      car: {
-        model: 'Чорний Toyota Prius',
-        category: 'Стандарт',
-        number: 'KA4***P*'
-      },
-      payment: 'Apple Pay'
-    },
+      date: '27 черв. 2026 г., 23:20',
+      from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      to: 'Київ, Каховська вулиця, 62А',
+      price: '890 ₴',
+      status: 'ВИКОНАНО'
+    }, 
     {
       id: 2,
-      date: '25 трав. 2026р., 13:04',
+      date: '26 черв. 2026 г., 22:46',
       from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
-      to: 'Місце посадки (Київ, Каховська вулиця, 62А)',
-      price: '303 ₴',
-      status: 'ВИКОНАНО',
-      driver: {
-        name: 'Олександр',
-        experience: 'Більше 1 року',
-        tripsCount: 4520,
-        rating: '4.91',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80'
-      },
-      car: {
-        model: 'Сірий Skoda Octavia',
-        category: 'Комфорт',
-        number: 'AA1***X*'
-      },
-      payment: 'Готівка'
+      to: 'Київ, Каховська вулиця, 62А',
+      price: '765 ₴',
+      status: 'ВИКОНАНО'
+    },
+    {
+      id: 3,
+      date: '21 черв. 2026 г., 23:19',
+      from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      to: 'Київ, Каховська вулиця, 62А',
+      price: '880 ₴',
+      status: 'ВИКОНАНО'
+    },
+    {
+      id: 4,
+      date: '20 черв. 2026 г., 23:08',
+      from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      to: 'Київ, Каховська вулиця, 62А',
+      price: '960 ₴',
+      status: 'ВИКОНАНО'
+    },
+    {
+      id: 5,
+      date: '20 черв. 2026 г., 23:08',
+      from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      to: 'Київ, Каховська вулиця, 62А',
+      price: '710 ₴',
+      status: 'ВИКОНАНО'
+    },
+    {
+      id: 6,
+      date: '4 черв. 2026 г., 22:19',
+      from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      to: 'Київ, Каховська вулиця, 62А',
+      price: '666 ₴',
+      status: 'ВИКОНАНО'
+    },
+    {
+      id: 8,
+      date: '4 черв. 2026 г., 22:19',
+      from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      to: 'Київ, Каховська вулиця, 62А',
+      price: '777 ₴',
+      status: 'ВИКОНАНО'
+    },
+    {
+      id: 9,
+      date: '4 черв. 2026 г., 22:19',
+      from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      to: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      price: '999 ₴',
+      status: 'ВИКОНАНО'
+    },
+    {
+      id: 10,
+      date: '4 черв. 2026 г., 22:19',
+      from: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      to: 'Паркінг ВДНГ (Київ, Академіка Глушкова проспект)',
+      price: '101010 ₴',
+      status: 'ВИКОНАНО'
     }
   ];
+
+  // Данные шаблона Uklon для детального экрана
+  const templateDriver = {
+    name: 'Віктор',
+    experience: 'Більше 3 років',
+    tripsCount: 21959,
+    rating: '4.96',
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80'
+  };
+
+  const templateCar = {
+    model: 'Чорний Toyota Prius',
+    category: 'Стандарт',
+    number: 'KA4***P*'
+  };
 
   return (
     <div className="history-page">
@@ -65,7 +125,7 @@ export default function HistoryPage() {
               <div key={i} className="stat-card">
                 <div className="stat-header">
                   <span>{item.label}</span>
-                  {item.icon}
+                  <span>{item.icon}</span>
                 </div>
                 <h2>{item.value}</h2>
               </div>
@@ -75,7 +135,7 @@ export default function HistoryPage() {
           {/* Список поездок */}
           <div className="trips-list">
             {trips.map((trip) => (
-              <div key={trip.id} className="trip-card" onClick={() => setSelectedTrip(trip)}>
+              <div key={trip.id} className="trip-card" onClick={() => setSelectedTrip(trip)} style={{ cursor: 'pointer' }}>
                 <div className="trip-card-header">
                   <span className="trip-date">{trip.date}</span>
                   <button className="more-btn" onClick={(e) => e.stopPropagation()}>⋮</button>
@@ -96,16 +156,21 @@ export default function HistoryPage() {
                 <div className="trip-footer">
                   <div className="price-box">
                     <span className="price">{trip.price}</span>
-                    <span className="pay-method">{trip.payment === 'Apple Pay' ? '📱' : '💵'}</span>
+                    <span className="pay-method">💵</span>
                   </div>
                   <span className="status-badge">{trip.status}</span>
+                </div>
+
+                <div className="trip-actions">
+                  <button className="action-btn" onClick={(e) => e.stopPropagation()}>В зворотній бік</button>
+                  <button className="action-btn" onClick={(e) => e.stopPropagation()}>Повторити</button>
                 </div>
               </div>
             ))}
           </div>
         </>
       ) : (
-        /* ЭКРАН ДЕТАЛЕЙ ПОЕЗДКИ (ПО ШАБЛОНУ ИЗ УКЛОН) */
+        /* ЭКРАН ДЕТАЛЕЙ ПОЕЗДКИ (ПО ТВОЕМУ ШАБЛОНУ ИЗ УКЛОН) */
         <div className="trip-details">
           <div className="details-header">
             <button className="back-btn" onClick={() => setSelectedTrip(null)}>✕</button>
@@ -117,26 +182,26 @@ export default function HistoryPage() {
           {/* Блок водителя */}
           <div className="driver-section">
             <div className="driver-info">
-              <img src={selectedTrip.driver.avatar} alt="driver" className="driver-avatar" />
+              <img src={templateDriver.avatar} alt="driver" className="driver-avatar" />
               <div className="driver-rating-badge">
-                <span>⭐ {selectedTrip.driver.rating}</span>
+                <span>⭐ {templateDriver.rating}</span>
               </div>
             </div>
             <div className="driver-text">
-              <h3>{selectedTrip.driver.name}</h3>
-              <p>В Uklon: {selectedTrip.driver.experience}</p>
-              <p>Поїздок: {selectedTrip.driver.tripsCount}</p>
+              <h3>{templateDriver.name}</h3>
+              <p>В Uklon: {templateDriver.experience}</p>
+              <p>Поїздок: {templateDriver.tripsCount}</p>
             </div>
           </div>
 
           {/* Блок машины */}
           <div className="car-section">
             <div className="car-text">
-              <h4>{selectedTrip.car.model}</h4>
-              <p>({selectedTrip.car.category})</p>
+              <h4>{templateCar.model}</h4>
+              <p>({templateCar.category})</p>
             </div>
             <div className="car-number-plate">
-              {selectedTrip.car.number}
+              {templateCar.number}
             </div>
           </div>
 
@@ -144,8 +209,8 @@ export default function HistoryPage() {
           <div className="payment-section">
             <div className="payment-title">Спосіб оплати</div>
             <div className="payment-value">
-              <span className="apple-pay-icon">{selectedTrip.payment === 'Apple Pay' ? ' Pay' : '💵'}</span>
-              <span>{selectedTrip.payment}</span>
+              <span className="apple-pay-icon">📱</span>
+              <span>Apple Pay</span>
             </div>
             <div className="total-price">{selectedTrip.price}</div>
           </div>
@@ -155,9 +220,9 @@ export default function HistoryPage() {
             <div className="route-title">Маршрут</div>
             <div className="route-container">
               <div className="route-line">
-                <div className="dot grey"></div>
+                <div className="dot yellow"></div>
                 <div className="line"></div>
-                <div className="dot grey"></div>
+                <div className="dot white"></div>
               </div>
               <div className="route-addresses">
                 <p className="address">{selectedTrip.from}</p>
@@ -173,7 +238,7 @@ export default function HistoryPage() {
           </div>
 
           {/* Меню помощи снизу */}
-          <div className="help-menu">
+          <div className="help-menu-block">
             <div className="help-title">Допомога</div>
             <div className="help-item">Підтримка <span>›</span></div>
             <div className="help-item">Загублені речі <span>›</span></div>
