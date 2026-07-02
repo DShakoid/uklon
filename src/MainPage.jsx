@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainPage.css';
+import HistoryIcon from './icons/HistoryIcon'; // Укажи правильный путь к файлу
 
 export default function MainPage() {
   const services = [
