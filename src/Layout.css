@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100%;          /* Наследует высоту от #root */
   position: relative;
+  width:100vw;
 }
 
 .app-header {
